@@ -259,8 +259,8 @@ document.addEventListener("keyup", e => {
 });
 
 document.getElementById("nextPhaseBtn").addEventListener("click", () => {
-  fundoImg.src = "../IMG/fase2prn.png"; // Muda a imagem do fundo para a fase 2
-  aguiaImg.src = "../IMG/pedra.png"; // Muda a imagem do obstáculo para a fase 2
+  fundoImg.src = "./IMG/fase2prn.png"; // Muda a imagem do fundo para a fase 2
+  aguiaImg.src = "./IMG/pedra.png"; // Muda a imagem do obstáculo para a fase 2
   fase2 = true; // Ativa a fase 2
   resetGame(); // Reseta o jogo para a nova fase
   gameLoop(); // Inicia o loop do jogo
