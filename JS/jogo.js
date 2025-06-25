@@ -120,7 +120,7 @@ function updatePipes() { // Atualiza a posição e estado dos obstáculos
       score++; // Incrementa a pontuação
       if (score % 10 === 0) pipeSpeed += 0.5; // Aumenta a dificuldade a cada 10 pontos
 
-      if (score >= 60 && !fase1Passada && !fase2) { // Se o jogador completou a fase 1
+      if (score >= 6 && !fase1Passada && !fase2) { // Se o jogador completou a fase 1
         fase1Passada = true; 
         paused = true; 
         document.getElementById("nextPhaseBtn").style.display = "inline-block";
