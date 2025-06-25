@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura a página para ser responsiva em diferentes dispositivos -->
+  <title>Jogo da Nave</title> 
+  <link rel="stylesheet" href="./CSS/style.css"> 
+</head>
+<body>
+  <div id="backgroundScroll"></div> <!-- Div para o fundo animado ou com efeito de rolagem -->
+  <div id="startScreen"> <!-- Div que representa a tela inicial do jogo -->
+    <div id="startScreenContent"> <!-- Conteúdo centralizado da tela inicial -->
+      <h1>Bem-vindo ao Jogo</h1> 
+      <button id="startGameButton">Iniciar Jogo</button> 
+      <button id="exitGameButton">Sair</button> 
+      <p id="credits">Desenvolvido por Ana Júlia</p>
+    </div>
+  </div>
+  <video id="video-cutscene" autoplay> <!-- Elemento de vídeo que exibe a cutscene automaticamente ao carregar -->
+    <source src="../SND/VIDEO FINAL.mp4" type="video/mp4"> 
+    Seu navegador não suporta vídeo. <!-- Mensagem exibida se o navegador não for compatível com vídeo -->
+  </video>
+  <div id="game"> <!-- Div principal do jogo, que será exibida após a cutscene -->
+    <div id="container">
+      <canvas id="gameCanvas" width="400" height="600"></canvas>
+      <div>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reiniciar</button>
+        <button id="nextPhaseBtn" style="display:none;">Próxima Fase</button>
+      </div>
+    </div>
+  </div>
+  <script src="../JS/jogo.js"></script>
+</body>
+</html>

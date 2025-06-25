@@ -1,0 +1,92 @@
+body {
+  margin: 0; /* Remove a margem padrão do corpo da página */
+  background-color: #000; /* Define a cor de fundo como preto */
+  font-family: Arial, sans-serif; /* Define a fonte do texto como Arial, com fallback sans-serif */
+  color: #fff; /* Define a cor do texto como branco */
+  display: flex; /* Usa flexbox para alinhar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites da tela */
+}
+
+#backgroundScroll {
+  position: fixed; /* Fixa o elemento ao fundo da tela */
+  top: 0; /* Alinha o topo do elemento com o topo da tela */
+  left: 0; /* Alinha a esquerda do elemento com a esquerda da tela */
+  width: 200%; /* Define o dobro da largura da tela para permitir a rolagem */
+  height: 100%; /* Ocupa toda a altura da tela */
+  background: url("../IMG/ABERTURA.png") repeat-x; /* Define uma imagem de fundo que se repete horizontalmente */
+  background-size: cover; /* Faz a imagem de fundo cobrir todo o elemento */
+  animation: scrollBackground 40s linear infinite; /* Aplica animação contínua de rolagem horizontal */
+  z-index: -1; /* Coloca o fundo atrás de todos os outros elementos */
+}
+
+@keyframes scrollBackground {
+  0% {
+    transform: translateX(0); /* Início da animação: sem deslocamento */
+  }
+  100% {
+    transform: translateX(-50%); /* Fim da animação: desloca metade da largura */
+  }
+}
+
+#startScreen {
+  text-align: center; /* Centraliza o conteúdo dentro da tela inicial */
+  z-index: 1; /* Garante que fique acima do fundo animado */
+}
+
+#startScreenContent h1 {
+  font-size: 48px; /* Define o tamanho da fonte do título */
+  margin-bottom: 20px; /* Espaço inferior do título */
+}
+
+#startScreenContent button {
+  width: 150px; /* Largura dos botões */
+  margin: 10px; /* Espaço ao redor dos botões */
+  font-size: 18px; /* Tamanho do texto dos botões */
+}
+
+#credits {
+  margin-top: 40px; /* Espaço acima dos créditos */
+  font-style: italic; /* Aplica estilo itálico ao texto */
+  font-size: 14px; /* Tamanho da fonte dos créditos */
+  color: #aaa; /* Cor cinza clara para os créditos */
+}
+
+#game {
+  display: none; /* Esconde a tela do jogo inicialmente */
+}
+
+#container {
+  display: flex; /* Usa flexbox para organizar o canvas e os botões */
+  gap: 20px; /* Espaço entre os elementos */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+canvas {
+  border: 2px solid #fff; /* Borda branca ao redor do canvas */
+  background-color: #1b2735; /* Cor de fundo do canvas (azul escuro) */
+  display: block; /* Impede que o canvas tenha espaços indesejados */
+}
+
+button {
+  background-color: #ff0000; /* Cor de fundo vermelha */
+  color: white; /* Cor do texto branca */
+  border: none; /* Remove borda padrão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  font-size: 16px; /* Tamanho da fonte do botão */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  border-radius: 8px; /* Arredonda as bordas do botão */
+  margin-bottom: 10px; /* Espaço inferior entre botões */
+  width: 100px; /* Largura fixa para os botões */
+}
+
+button:hover {
+  background-color: #666; /* Cor de fundo quando o mouse passa por cima (hover) */
+}
+
+#video-cutscene {
+  display: none; /* Esconde o vídeo inicialmente */
+  width: 100%; /* O vídeo ocupa toda a largura disponível */
+}
