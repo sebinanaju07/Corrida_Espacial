@@ -5,13 +5,13 @@ const SPRITE_WIDTH = 160; // Define a largura de cada quadro da sprite da nave
 const SPRITE_HEIGHT = 180; // Define a altura de cada quadro da sprite da nave
 
 const naveImg = new Image(); // Cria o objeto de imagem da nave
-naveImg.src = "../IMG/00002.png"; // Define o caminho da imagem da nave
+naveImg.src = "./IMG/00002.png"; // Define o caminho da imagem da nave
 
 const fundoImg = new Image(); // Cria o objeto de imagem do fundo
-fundoImg.src = "../IMG/fase1prn.png"; // Define o caminho da imagem do fundo da fase 1
+fundoImg.src = "./IMG/fase1prn.png"; // Define o caminho da imagem do fundo da fase 1
 
 const aguiaImg = new Image(); // Cria o objeto de imagem da águia (obstáculo)
-aguiaImg.src = "../IMG/06.png"; // Define o caminho da imagem da águia
+aguiaImg.src = "./IMG/06.png"; // Define o caminho da imagem da águia
 
 const AGUIA_FRAME_WIDTH = 320; // Largura de cada frame da águia na sprite
 const AGUIA_FRAME_HEIGHT = 325; // Altura de cada frame da águia na sprite
@@ -28,11 +28,11 @@ let fase1Passada = false; // Verifica se o jogador passou da fase 1
 let fase2 = false; // Verifica se está na fase 2
 let fimDeJogo = false; // Verifica se o jogo foi concluído
 
-const musicaFundo = new Audio("../AUDIO/fundosom.mp3"); // Carrega o som de fundo
+const musicaFundo = new Audio("./AUDIO/fundosom.mp3"); // Carrega o som de fundo
 musicaFundo.loop = true; // Faz o som de fundo repetir em loop
 
-const somExplosao = new Audio("../AUDIO/explosao.mp3"); // Carrega o som de explosão
-const somGameOver = new Audio("../AUDIO/over.mp3"); // Carrega o som de game over
+const somExplosao = new Audio("./AUDIO/explosao.mp3"); // Carrega o som de explosão
+const somGameOver = new Audio("./AUDIO/over.mp3"); // Carrega o som de game over
 
 function tocarMusicaFundo() { // Toca a música de fundo se ainda não estiver tocando
   if (musicaFundo.paused) {
